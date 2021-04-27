@@ -3,8 +3,9 @@
 
 * create business case
 *  add data: coordinates from each city,, relate city to state/region
-* list data science process (using crisp, ml pipeline), and create on notebook strucutre
 * explore data using notebook and custom streamlit app
+* modeling, evaluation
+* create streamlit app
 
 
 # Variables Meaning
