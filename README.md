@@ -34,10 +34,6 @@
 | 3 pm          | Dirn | Wind direction averaged over 10 minutes prior to 3 pm                                                  | compass points      |   |
 | 3 pm          | Spd  | Wind speed averaged over 10 minutes prior to 3 pm                                                      | kilometres per hour |   |
 | 3 pm          | MSLP | Atmospheric pressure reduced to mean sea level at 3 pm                                                 | hectopascals        |   |
-|               |      |                                                                                                        |                     |   |
-|               |      |                                                                                                        |                     |   |
-|               |      |                                                                                                        |                     |   |
-|               |      |                                                                                                        |                     |   |
 
 # Business Requirements
 * As a Data Analyst from CI AgroBusiness division, you are requested by a new Australian customer to provide actionable insights and data driven recommendations on weather information. This new customer has substantial agriculture business in Australia and understanding the rainfall level is critical for their farmer's network. Their clients needs to know precisely if it will rain in the next day and an reliable reference for the next 7 days.
