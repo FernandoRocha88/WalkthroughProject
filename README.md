@@ -38,9 +38,9 @@
 
 # Business Requirements
 * As a Data Analyst from CI AgroBusiness division, you are requested by a new Australian customer to provide actionable insights and data driven recommendations on weather information. This new customer has substantial agriculture business in Australia and understanding the rainfall level is critical for their farmer's network. Their clients needs to know precisely if it will rain in the next day and an reliable reference for the next 7 days.
-  * 1 - We want to tell whether or not will rain in the next day in almost 50 Australian cities. In case of rain, you should tell the rainfall level.
-  * 2 - We want to cluster the Australian cities and regions according to rainfall levels
-  * 3 - We want to understand the rainfall seasonality for a given city in the last 5 years.
+  * **1** - We want to tell whether or not will rain in the next day in almost 50 Australian cities. In case of rain, you should tell the rainfall level.
+  * **2** - We want to cluster the Australian cities and regions according to rainfall levels
+  * **3** - We want to understand the rainfall seasonality for a given city in the last 5 years.
 
 # Hypothesis and how to validate?
 * some region has more rainfall? or some region is more difficult to predict
@@ -53,7 +53,7 @@
   * We build a Classifier (WeatherClf) to predict RainTomorrow based on weather data
     * Train data - label: RainTomorrow ; features: all other variables:
   * We will build a Regression Model (WeatherReg) to predict RainfallTomorrow based on weather data
-    * Train data - subset RainTomorrow as 1, label: RainfallTomorrow, features: all other variables
+    * Train data - subset RainfallTomorrow as 1, label: RainfallTomorrow, features: all other variables
 
 * Business Requirement 2: Cluster
   *  We will build a Clustering Model (WeatherClust) to group weather data
@@ -68,7 +68,16 @@
 
 # ML Business Case
 ## WeatherClf
-* xxxx
+* We want a ML model to predict if it will rain tomorrow. It is a 2-class, single-label, classification model: 0 (no), 1 (yes)
+*  Our ideal outcome is provide to our farmer's network a reliable insight if it will rain or not tomorrow, so they can plan their immediate demand.
+*  The model success metrics are
+    *  at least 90% Recall, Precision and F1 Score for RainTomorrow = 1 (yes), on train and test set
+    *  The ML model is considered a failure if:
+       *  after 1 month of usage, it fails to predict accurately more than 70% (which is the current accuracy level from local TB news)
+       *  F1 score for RainTomorrow = 1 (yes), on test set
+* The output is defined as the chance of raining tomorrow. If it is more than 50%, we say it will rain. The farmer will access the App, and the location  (city, gps coordinates) will be pulled automatically. After 3pm, we will kbe ableto pull the data for all features from local weather station. Once these information are pulled, the App will be ready for the prediction. The live data depends on GPS and local weather station, which are pulled from external API. The prediction is made on the fly (not in batches)
+* Heuristics: If we didnt use ML, an alternative option, which is the current option, is to rely on predictions for rainning next day from local news, which traditionally over the last 10 years, has an accuracy of 70%.
+* The training data to fit the model come from Australian Government - Bureau of Meteorology. This dataset contains about 10 years of daily weather observations from many locations across Australia.
 
 ## WeatherReg
 * ssss
