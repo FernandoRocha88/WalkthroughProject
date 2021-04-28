@@ -1,6 +1,8 @@
 # WalkthroughProject1
 
 
+<img src="https://lh3.googleusercontent.com/proxy/t9GBHO83jlKXhsF9aSnp_0uxbEQg8zH9tn-OftbiEYXEPmTPJI0NievnjsYYZX2vScLFIFLm-OxIfT0zsV9S5ej8QRigzdkFgv1Z" width="40%" height="40%"/>
+
 * create business case
 *  add data: coordinates from each city,, relate city to state/region
 * explore data using notebook and custom streamlit app
@@ -43,15 +45,14 @@
   * **3** - We want to understand the rainfall seasonality for a given city in the last 5 years.
 
 # Hypothesis and how to validate?
-* some region has more rainfall? or some region is more difficult to predict
-* xxxx
+* some region has more rainfall? 
+* which region is more difficult to predict
 * xxxx
 
 
 # Rationale to map the business requirements to the Data Visualizations and ML tasks
 * Business Requirement 1: Classification and Regression
   * We build a Classifier (WeatherClf) to predict RainTomorrow based on weather data
-    * Train data - label: RainTomorrow ; features: all other variables:
   * We will build a Regression Model (WeatherReg) to predict RainfallTomorrow based on weather data
     * Train data - subset RainfallTomorrow as 1, label: RainfallTomorrow, features: all other variables
 
@@ -68,22 +69,35 @@
 
 # ML Business Case
 ## WeatherClf
-* We want a ML model to predict if it will rain tomorrow. It is a 2-class, single-label, classification model: 0 (no), 1 (yes)
+* We want a ML model to predict if it will rain tomorrow. It is a supervised model, a 2-class, single-label, classification model: 0 (no), 1 (yes)
 *  Our ideal outcome is provide to our farmer's network a reliable insight if it will rain or not tomorrow, so they can plan their immediate demand.
 *  The model success metrics are
     *  at least 90% Recall, Precision and F1 Score for RainTomorrow = 1 (yes), on train and test set
     *  The ML model is considered a failure if:
        *  after 1 month of usage, it fails to predict accurately more than 70% (which is the current accuracy level from local TB news)
        *  F1 score for RainTomorrow = 1 (yes), on test set
-* The output is defined as flag, indicating if it will rain tomorrow or not. This conclusion is made based on the chance of raining tomorrow. If it is more than 50%, we say it will rain. The farmer will access the App, and the location  (city, gps coordinates) will be pulled automatically. After 3pm, we will kbe ableto pull the data for all features from local weather station. Once these information are pulled, the App will be ready for the prediction. The live data depends on GPS and local weather station, which are pulled from external API. The prediction is made on the fly (not in batches)
+* The output is defined as flag, indicating if it will rain tomorrow or not. This conclusion is made based on the chance of raining tomorrow. If it is more than 50%, we say it will rain. The farmer will access the App, and the location  (city, gps coordinates) will be pulled automatically. After 3pm, we will kbe able to pull the data for all features from local weather station. Once these information are pulled, the App will be ready for the prediction. The live data depends on GPS and local weather station, which are pulled from external API. The prediction is made on the fly (not in batches)
+* Heuristics: If we didnt use ML, an alternative option, which is the current option, is to rely on predictions for rainning next day from local news, which traditionally over the last 10 years, has an accuracy of 70%.
+* The training data to fit the model come from Australian Government - Bureau of Meteorology. This dataset contains about 10 years of daily weather observations from many locations across Australia.
+    * Train data - label: RainTomorrow ; features: all other variables:
+
+## WeatherReg
+* We want a ML model to predict tomorrow's rainfall levels, in mm. It is a supervised model, a uni-dimensional regression model.
+* Our ideal outcome is provide to our farmer's network a reliable insight on tomorrow's rainfall level, so they can plan their immediate demand.
+*  The model success metrics are
+    *  at 0.85 for R2 score, on train and test set
+    *  The ML model is considered a failure if:
+       *  after 2 months of usage, model's predictions are 50% off more than 30% of the time. Say, a prediction is >50% off if predicted 10mm and the actual value was >15mm. If this behaviour happens more than 30% in 2 months, the model has failed
+* The output is defined a continious value for rainfall, in mm. It is assumed that this model will predict tomorrow rainfall level if the WeatherClf model predicts 1 (yes for rain). The farmer will access the App, and the location  (city, gps coordinates) will be pulled automatically. After 3pm, we will kbe able to pull the data for all features from local weather station. Once these information are pulled, the App will be ready for the prediction. The live data depends on GPS and local weather station, which are pulled from external API. The prediction is made on the fly (not in batches)
 * Heuristics: If we didnt use ML, an alternative option, which is the current option, is to rely on predictions for rainning next day from local news, which traditionally over the last 10 years, has an accuracy of 70%.
 * The training data to fit the model come from Australian Government - Bureau of Meteorology. This dataset contains about 10 years of daily weather observations from many locations across Australia.
 
-## WeatherReg
-* ssss
-
 ## WeatherClust
-* ssss
+* We want a ML model to cluster rainfall levels, in mm. It is a uni-dimensional regression model.
+
+
+* Heuristics: If we didnt use ML, an alternative option, which is the current option, is to rely on predictions for rainning next day from local news, which traditionally over the last 10 years, has an accuracy of 70%.
+* The training data to fit the model come from Australian Government - Bureau of Meteorology. This dataset contains about 10 years of daily weather observations from many locations across Australia.
 
 3. What does your ML project do? (We want a ML model to …)
 4. Ideal outcome? 
