@@ -38,10 +38,9 @@
 
 # Business Requirements
 * As a Data Analyst from CI AgroBusiness division, you are requested by a new Australian customer to provide actionable insights and data driven recommendations on weather information. This new customer has substantial agriculture business in Australia and understanding the rainfall level is critical for their farmer's network. Their clients needs to know precisely if it will rain in the next day and an reliable reference for the next 7 days.
-  * 1 - We want to cluster the Australian cities according to rainfall levels 
-  * 2 - We want to tell whether or not will rain in the next day in almost 50 Australian cities. In case of rain, you should tell the rainfall level.
+  * 1 - We want to tell whether or not will rain in the next day in almost 50 Australian cities. In case of rain, you should tell the rainfall level.
+  * 2 - We want to cluster the Australian cities and regions according to rainfall levels
   * 3 - We want to understand the rainfall seasonality for a given city in the last 5 years.
-  * 4 - We want to forecast for the next 7 days the rainfall levels for a given city
 
 # Hypothesis and how to validate?
 * some region has more rainfall? or some region is more difficult to predict
@@ -50,16 +49,31 @@
 
 
 # Rationale to map the business requirements to the Data Visualizations and ML tasks
-* Business Requirement 1: Clustering
-  * We build a Cluster (WeatherClus) and map to 
+* Business Requirement 1: Classification and Regression
+  * We build a Classifier (WeatherClf) to predict RainTomorrow based on weather data
+    * Train data - label: RainTomorrow ; features: all other variables:
+  * We will build a Regression Model (WeatherReg) to predict RainfallTomorrow based on weather data
+    * Train data - subset RainTomorrow as 1, label: RainfallTomorrow, features: all other variables
 
+* Business Requirement 2: Cluster
+  *  We will build a Clustering Model (WeatherClust) to group weather data
+     *  Train data - features: all variables
 
+* Business Requirement 3: Data Visualization
+  * We will subset a given city and the data from the last 5 years; then resample and plot a line chart (Rainfall x Time)
+  * There wil be 3 plots:
+    * Resampled by year
+    * Resampled by month
+    * Resampled by day
 
 # ML Business Case
-## ML 1
+## WeatherClf
 * xxxx
 
-## ML 2
+## WeatherReg
+* ssss
+
+## WeatherClust
 * ssss
 
 3. What does your ML project do? (We want a ML model to …)
@@ -68,3 +82,33 @@
 6. Output: what is, how to use it, how to integrate with current processes?
 7. Heuristics?
 8. What is the data source?
+
+
+# Streamlit App User Interface
+
+## Page 1: Rainfall prediction
+* User Interface with inputs (city and weather data) and prediction indicating the chance of raining tomorrow. If it is greater than 50%, it will rain. In that case, it tells, how much it would rain
+
+## Page 2: Rainfall Seasonality
+* User Interface with menu to select a city. 
+* 3 Line chart plots indicating, respectively, the seasonality for Year, Month and Day.
+
+## Page 3: WeatherClf
+* Evaluation metrics/performance on WeatherClf
+  * For both train and test set: Confusion Matrix and Classification Report
+  * Bias/Variance Tradeoff
+
+## Page 4: WeatherReg
+* Evaluation metrics/performance on WeatherReg
+  * For both train and test set: R2, RMSE, MSE, MAE
+  * Bias/Variance Tradeoff
+
+## Page 5: WeatherClust
+* Evaluation metrics/performance on WeatherClust
+  * 3D Scatter Plot for PCA with 3 components, colored by clusters
+  * Silhouete score
+
+
+# Django App User Interface
+
+* It contains **Page 1** and **Page 2** from Streamlit App User Interface
