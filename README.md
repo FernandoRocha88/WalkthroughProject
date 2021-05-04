@@ -1,11 +1,8 @@
-# WalkthroughProject1
+# WalkthroughProject
 
-
-<img src="https://lh3.googleusercontent.com/proxy/t9GBHO83jlKXhsF9aSnp_0uxbEQg8zH9tn-OftbiEYXEPmTPJI0NievnjsYYZX2vScLFIFLm-OxIfT0zsV9S5ej8QRigzdkFgv1Z" width="40%" height="40%"/>
 
 --- 
 
-*  add data: coordinates from each city,, relate city to state/region
 * explore data using notebook and custom streamlit app
 * modeling, evaluation
 * create streamlit app
