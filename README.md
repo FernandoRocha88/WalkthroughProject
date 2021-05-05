@@ -111,32 +111,34 @@
 
 ---
 
-# Streamlit App User Interface
+# Dashboard Design
 
-## Page 1: Rainfall prediction
+## Streamlit App User Interface
+
+### Page 1: Rainfall prediction
 * User Interface with inputs (city and weather data) and prediction indicating the chance of raining tomorrow. If it is greater than 50%, it will rain. In that case, it tells, how much it would rain
 
-## Page 2: Rainfall Seasonality
+### Page 2: Rainfall Seasonality
 * User Interface with menu to select a city. 
 * 3 Line chart plots indicating, respectively, the seasonality for Year, Month and Day.
 
-## Page 3: WeatherClf
+### Page 3: WeatherClf
 * Evaluation metrics/performance on WeatherClf
   * For both train and test set: Confusion Matrix and Classification Report
   * Bias/Variance Tradeoff
 
-## Page 4: WeatherReg
+### Page 4: WeatherReg
 * Evaluation metrics/performance on WeatherReg
   * For both train and test set: R2, RMSE, MSE, MAE
   * Bias/Variance Tradeoff
 
-## Page 5: WeatherClust
+### Page 5: WeatherClust
 * Evaluation metrics/performance on WeatherClust
   * 3D Scatter Plot for PCA with 3 components, colored by clusters
   * Silhouete score
 
 ---
 
-# Django App User Interface
+## Django App User Interface
 
 * It contains **Page 1** and **Page 2** from Streamlit App User Interface
