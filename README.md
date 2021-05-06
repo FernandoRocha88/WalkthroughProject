@@ -22,8 +22,8 @@
 | Evap          |      | "Class A" pan evaporation in the 24 hours to 9am                                                       | millimetres         |   |
 | Sun           |      | Bright sunshine in the 24 hours to midnight                                                            | hours               |   |
 | Max wind gust | Dirn | Direction of strongest gust in the 24 hours to midnight                                                | 16 compass points   |   |
-| 9 am          | Spd  | Speed of strongest wind gust in the 24 hours to midnight                                               | kilometres per hour |   |
-| 9 am          | Time | Time of strongest wind gust                                                                            | local time hh:mm    |   |
+|               | Spd  | Speed of strongest wind gust in the 24 hours to midnight                                               | kilometres per hour |   |
+|               | Time | Time of strongest wind gust                                                                            | local time hh:mm    |   |
 | 9 am          | Temp | Temperature at 9 am                                                                                    | degrees Celsius     |   |
 | 9 am          | RH   | Relative humidity at 9 am                                                                              | percent             |   |
 | 9 am          | Cld  | Fraction of sky obscured by cloud at 9 am                                                              | eighths             |   |
