@@ -15,7 +15,7 @@
 |    Heading    |      |                                                 Meaning                                                |        Units        |   |
 |:-------------:|:----:|:------------------------------------------------------------------------------------------------------:|:-------------------:|---|
 | Date          |      | Day of the month                                                                                       |                     |   |
-| Day           |      | Day of the week                                                                                        | first two letters   |   |
+| Location      |      | Australian city                                                                                        |                     |   |
 | Temps         | Min  | Minimum temperature in the 24 hours to 9am. Sometimes only known to the nearest whole degree.          | degrees Celsius     |   |
 | Temps         | Max  | Maximum temperature in the 24 hours from 9am. Sometimes only known to the nearest whole degree.        | degrees Celsius     |   |
 | Rain          |      | Precipitation (rainfall) in the 24 hours to 9am. Sometimes only known to the nearest whole millimetre. | millimetres         |   |
