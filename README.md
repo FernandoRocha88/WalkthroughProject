@@ -1,5 +1,7 @@
 # WalkthroughProject
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Australia_satellite_plane.jpg/1094px-Australia_satellite_plane.jpg" width="40%" height="40%"/>
+
 
 --- 
 
