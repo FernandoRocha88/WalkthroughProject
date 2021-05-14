@@ -12,14 +12,21 @@
 ---
 
 # Variables Meaning
-* Table Source: [link](http://www.bom.gov.au/climate/dwo/IDCJDW0000.shtml). The nomenclature below is slightly different from the dataset, however it is possible to transfer table's interpretation to the existing dataset.
 
-|    Heading    |      |                                                 Meaning                                                |        Units        |   |
-|:-------------:|:----:|:------------------------------------------------------------------------------------------------------:|:-------------------:|---|
-| Date          |      | Day of the month                                                                                       |                     |   |
-| Location      |      | Australian city                                                                                        |                     |   |
-| Temps         | Min  | Minimum temperature in the 24 hours to 9am. Sometimes only known to the nearest whole degree.          | degrees Celsius     |   |
-| Temps         | Max  | Maximum temperature in the 24 hours from 9am. Sometimes only known to the nearest whole degree.        | degrees Celsius     |   |
+['', '', '', '', 'RainfallTomorrow',
+       'Evaporation', 'Sunshine', 'WindGustDir', 'WindGustSpeed', 'WindDir9am',
+       'WindDir3pm', 'WindSpeed9am', 'WindSpeed3pm', 'Humidity9am',
+       'Humidity3pm', 'Pressure9am', 'Pressure3pm', 'Cloud9am', 'Cloud3pm',
+       'Temp9am', 'Temp3pm', 'RainToday', 'RainTomorrow', 'Latitude',
+       'Longitude', 'State']
+
+
+|    Heading    |                                                 Meaning                                                |        Units        |   |
+|:-------------:|:------------------------------------------------------------------------------------------------------:|:-------------------:|---|
+| Date          | YYYY - MM - DD                                                                                         |                     |   |
+| Location      | Australian city                                                                                        |                     |   |
+| MinTemp       | Minimum temperature in the 24 hours to 9am. Sometimes only known to the nearest whole degree.          | degrees Celsius     |   |
+| MaxTemp       | Maximum temperature in the 24 hours from 9am. Sometimes only known to the nearest whole degree.        | degrees Celsius     |   |
 | Rain          |      | Precipitation (rainfall) in the 24 hours to 9am. Sometimes only known to the nearest whole millimetre. | millimetres         |   |
 | Evap          |      | "Class A" pan evaporation in the 24 hours to 9am                                                       | millimetres         |   |
 | Sun           |      | Bright sunshine in the 24 hours to midnight                                                            | hours               |   |
