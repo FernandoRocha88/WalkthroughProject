@@ -5,8 +5,8 @@
 
 
 <p float="left">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Australia_satellite_plane.jpg/1094px-Australia_satellite_plane.jpg" width="40%" height="40%"/ hspace="40">
- <img src="https://i.pinimg.com/originals/38/74/88/3874881e3752448272bf63f00b63dae0.jpg" width="33%" height="33%"/>
+ <img src="https://ichef.bbci.co.uk/news/1632/idt2/idt2/b0824ddd-80ca-425c-b3d4-3ca25ef1d494/image/816" width="45%" height="45%"/ hspace="40">
+ <img src="https://i.pinimg.com/originals/4d/e3/0a/4de30ae66ce6ca00459e03df79718854.gif" width="40%" height="40%"/>
  </p>
 
 
