@@ -13,38 +13,36 @@
 
 # Variables Meaning
 
-['', '', '', '', 'RainfallTomorrow',
-       'Evaporation', 'Sunshine', 'WindGustDir', 'WindGustSpeed', 'WindDir9am',
-       'WindDir3pm', 'WindSpeed9am', 'WindSpeed3pm', 'Humidity9am',
-       'Humidity3pm', 'Pressure9am', 'Pressure3pm', 'Cloud9am', 'Cloud3pm',
-       'Temp9am', 'Temp3pm', 'RainToday', 'RainTomorrow', 'Latitude',
-       'Longitude', 'State']
+|    Heading    |                                                 Meaning                                                |        Units        |
+|:-------------:|:------------------------------------------------------------------------------------------------------:|:-------------------:|
+| Date          | YYYY - MM - DD                                                                                         |                     |
+| Location      | Australian city                                                                                        |                     |
+| MinTemp       | Minimum temperature in the 24 hours to 9am. Sometimes only known to the nearest whole degree.          | degrees Celsius     |
+| MaxTemp       | Maximum temperature in the 24 hours from 9am. Sometimes only known to the nearest whole degree.        | degrees Celsius     |
+| RainfallToday | Rainfall levels                                                                                        | milimitres          |
+| Evaporation   | "Class A" pan evaporation in the 24 hours to 9am                                                       | millimetres         |
+| Sunshine      | Bright sunshine in the 24 hours to midnight                                                            | hours               |
+| WindGustDir   | Direction of strongest gust in the 24 hours to midnight                                                | 16 compass points   |
+| WindGustSpeed | Speed of strongest wind gust in the 24 hours to midnight                                               | kilometres per hour |
+| Temp9am       | Temperature at 9 am                                                                                    | degrees Celsius     |
+| Humidity9am   | Relative humidity at 9 am                                                                              | percent             |
+| Cloud9am      | Fraction of sky obscured by cloud at 9 am                                                              | eighths             |
+| WindDir9am    | Wind direction averaged over 10 minutes prior to 9 am                                                  | compass points      |
+| WindSpeed9am  | Wind speed averaged over 10 minutes prior to 9 am                                                      | kilometres per hour |
+| Pressure9am   | Atmospheric pressure reduced to mean sea level at 9 am                                                 | hectopascals        |
+| Temp3pm       | Temperature at 3 pm                                                                                    | degrees Celsius     |
+| Humidity3pm   | Relative humidity at 3 pm                                                                              | percent             |
+| Cloud3pm      | Fraction of sky obscured by cloud at 3 pm                                                              | eighths             |
+| WindDir3pm    | Wind direction averaged over 10 minutes prior to 3 pm                                                  | compass points      |
+| WindSpeed3pm  | Wind speed averaged over 10 minutes prior to 3 pm                                                      | kilometres per hour |
+| Pressure3pm   | Atmospheric pressure reduced to mean sea level at 3 pm                                                 | hectopascals        |
+| RainToday     | Flag indicating if rained today                                                                        | Yes or No           |
+| RainTomorrow  | Flag indicating if it will rain tomorrow                                                               | Yes or No           |
+| Latitude      | Latitude                                                                                               |                     |
+| Longitude     | Longitude                                                                                              |                     |
+| State         | Australian State                                                                                       |                     |
 
 
-|    Heading    |                                                 Meaning                                                |        Units        |   |
-|:-------------:|:------------------------------------------------------------------------------------------------------:|:-------------------:|---|
-| Date          | YYYY - MM - DD                                                                                         |                     |   |
-| Location      | Australian city                                                                                        |                     |   |
-| MinTemp       | Minimum temperature in the 24 hours to 9am. Sometimes only known to the nearest whole degree.          | degrees Celsius     |   |
-| MaxTemp       | Maximum temperature in the 24 hours from 9am. Sometimes only known to the nearest whole degree.        | degrees Celsius     |   |
-| Rain          |      | Precipitation (rainfall) in the 24 hours to 9am. Sometimes only known to the nearest whole millimetre. | millimetres         |   |
-| Evap          |      | "Class A" pan evaporation in the 24 hours to 9am                                                       | millimetres         |   |
-| Sun           |      | Bright sunshine in the 24 hours to midnight                                                            | hours               |   |
-| Max wind gust | Dirn | Direction of strongest gust in the 24 hours to midnight                                                | 16 compass points   |   |
-|               | Spd  | Speed of strongest wind gust in the 24 hours to midnight                                               | kilometres per hour |   |
-|               | Time | Time of strongest wind gust                                                                            | local time hh:mm    |   |
-| 9 am          | Temp | Temperature at 9 am                                                                                    | degrees Celsius     |   |
-| 9 am          | RH   | Relative humidity at 9 am                                                                              | percent             |   |
-| 9 am          | Cld  | Fraction of sky obscured by cloud at 9 am                                                              | eighths             |   |
-| 9 am          | Dirn | Wind direction averaged over 10 minutes prior to 9 am                                                  | compass points      |   |
-| 9 am          | Spd  | Wind speed averaged over 10 minutes prior to 9 am                                                      | kilometres per hour |   |
-| 9 am          | MSLP | Atmospheric pressure reduced to mean sea level at 9 am                                                 | hectopascals        |   |
-| 3 pm          | Temp | Temperature at 3 pm                                                                                    | degrees Celsius     |   |
-| 3 pm          | RH   | Relative humidity at 3 pm                                                                              | percent             |   |
-| 3 pm          | Cld  | Fraction of sky obscured by cloud at 3 pm                                                              | eighths             |   |
-| 3 pm          | Dirn | Wind direction averaged over 10 minutes prior to 3 pm                                                  | compass points      |   |
-| 3 pm          | Spd  | Wind speed averaged over 10 minutes prior to 3 pm                                                      | kilometres per hour |   |
-| 3 pm          | MSLP | Atmospheric pressure reduced to mean sea level at 3 pm                                                 | hectopascals        |   |
 
 ---
 
