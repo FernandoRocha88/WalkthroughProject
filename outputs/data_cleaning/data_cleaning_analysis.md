@@ -1,7 +1,11 @@
+* RainTomorrow - humidity3pm, cloud3pm, , sunshine
+* Rainfallomorrow- 
+
+
 |     Variable     | RowsWithMissingData | PercentageOfDataset | DataType |                        Method                        |
 |:----------------:|:-------------------:|:-------------------:|:--------:|:----------------------------------------------------:|
-|     Sunshine     |        69835        |        48.01        |  float64 |        drop variable (high pps with humidty3pm       |
-|    Evaporation   |        62790        |        43.17        |  float64 |      drop - (high pps with temp3pm and max temp)     |
+|     Sunshine     |        69835        |        48.01        |  float64 |        drop variable high pps with humidty3pm        |
+|    Evaporation   |        62790        |        43.17        |  float64 |      drop - high pps with temp3pm and max temp       |
 |     Cloud3pm     |        59358        |        40.81        |  object  | CategoricalImputer -keep,hihg pps with rain tomorrow |
 |     Cloud9am     |        55888        |        38.42        |  object  |         drop - high correlated with cloud3pm         |
 |    Pressure9am   |        15065        |        10.36        |  float64 |                   Median Imputation                  |
@@ -21,8 +25,11 @@
 |      Temp9am     |         1767        |         1.21        |  float64 |                   Median Imputation                  |
 |   WindSpeed9am   |         1767        |         1.21        |  float64 |                   Median Imputation                  |
 |      MinTemp     |         1485        |         1.02        |  float64 |                         Mean                         |
-|      MaxTemp     |         1261        |         0.87        |  float64 |                      drop na???                      |
+|      MaxTemp     |         1261        |         0.87        |  float64 |                      Median Imputation               |
 |                  |                     |                     |          |                                                      |
 |                  |                     |                     |          |                                                      |
 |                  |                     |                     |          |                                                      |
 |                  |                     |                     |          |                                                      |
+
+
+
