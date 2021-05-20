@@ -75,6 +75,7 @@
 
 * **Business Requirement 2**: Cluster
   *  We will build a Clustering Model (WeatherClust) to group weather data
+  *  We will plot in a map the cities/states, colored by clusters
 
 * **Business Requirement 3**: Data Visualization
   * We will subset a given city and the data from the last 5 years; then resample and plot a line chart (Rainfall x Time)
