@@ -78,10 +78,11 @@
   *  We will plot in a map the cities/states, colored by clusters
 
 * **Business Requirement 3**: Data Visualization
-  * We will subset a given city and the data from the last 5 years; and plot a line chart (Rainfall x Time) to understand Rainfall Seasonality
+  * We will subset a given city and the data from the last 5 years; and plot a line chart (Rainfall x Time) to understand Rainfall Seasonality. There will be 3 plots:
     * by year
     * by month
     * by week day
+ * We will plot a time series heatmap showing Rain Days, for a given ciy in the last 5 years
 
 ---
 
