@@ -151,9 +151,3 @@
 * Evaluation metrics/performance on WeatherClust
   * 3D Scatter Plot for PCA with 3 components, colored by clusters
   * Silhouete score
-
----
-
-## Django App User Interface
-
-* It contains **Page 1** and **Page 2** from Streamlit App User Interface
